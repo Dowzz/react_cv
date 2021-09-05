@@ -1,0 +1,179 @@
+.sidebar {
+  background: $color-1;
+  font-family: $font-1;
+  min-height: $minHeight;
+  width: 264px;
+  border-radius: $borderRadius;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 250px 1fr 108px;
+  grid-template-areas:
+    "1"
+    "2"
+    "3";
+
+  .id {
+    grid-area: 1;
+    text-align: center;
+    user-select: none;
+    position: relative;
+  }
+  .idContent {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+
+    img {
+      border-radius: 50%;
+      box-shadow: 0 0 0 4px $color-3, 0 0 0 12px $color-2;
+    }
+    h3 {
+      font-size: 1.3rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2rem;
+      margin-top: 1.5rem;
+      color: $color-5;
+    }
+  }
+  .navigation {
+    grid-area: 2;
+    padding: 3rem 2.5rem;
+    height: 475px;
+
+    ul {
+      width: auto;
+      height: 100%;
+      display: grid;
+    }
+    ul:hover li:not(:hover) {
+      opacity: 0.5;
+    }
+    li {
+      padding: 1rem 0 1rem 0.4rem;
+      font-size: 1.3 rem;
+      position: relative;
+      transform: rotatey(30deg) scaleX(1.3);
+      transform-origin: center;
+      transition: 0.3s;
+      :hover {
+        font-size: 1.5rem;
+      }
+      a {
+        color: $color-5;
+        opacity: 0.6;
+      }
+      .navActive {
+        color: $color-4;
+      }
+      svg {
+        font-size: 0.95rem;
+      }
+
+      li a.active,
+      li a:hover {
+        opacity: 1;
+      }
+    }
+  }
+}
+.cvDownload {
+  font: $color-4;
+}
+.socialNetwork {
+  grid-area: 3;
+
+  ul {
+    display: flex;
+    width: 264px;
+    padding: 0 5px;
+    justify-content: space-between;
+
+    li {
+      font-size: 1.5rem;
+      background: $color-5;
+      color: $color-1;
+      border-radius: 50%;
+      padding: 0.5rem 0.8rem;
+      transition: 0.3s;
+      cursor: pointer;
+
+      a:visited {
+        color: $color-1;
+      }
+      &:nth-child(1) {
+        padding: 0.5rem 0.85rem;
+      }
+      &:nth-child(5) {
+        padding: 0.5rem 0.75rem;
+      }
+      &:hover {
+        background: $color-4;
+      }
+    }
+  }
+  .signature {
+    margin-top: 2rem;
+    text-align: center;
+    letter-spacing: 0.1rem;
+    font-size: 0.7rem;
+
+    p {
+      color: $color-5;
+      &:hover {
+        color: $color-4;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .sidebar {
+    display: flex;
+    min-height: 50px;
+    margin-bottom: 0.2rem;
+    width: 100%;
+    .id,
+    .socialNetwork {
+      display: none;
+    }
+    .navigation {
+      width: 100%;
+      padding: 0;
+      height: inherit;
+
+      ul {
+        display: flex;
+        justify-content: center;
+
+        span {
+          margin-left: 1.5rem !important;
+          margin-right: 1.5rem !important;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 580px) {
+  .sidebar {
+    ul {
+      justify-content: space-around !important;
+      padding: 0 50px 0 0;
+      margin-left: 20px;
+      padding-top: 0.5rem;
+
+      li {
+        padding: 1rem 0 !important;
+      }
+      svg {
+        font-size: 1.4rem !important;
+        transform: translateY(-10px) !important;
+      }
+      span {
+        display: none;
+      }
+    }
+  }
+}

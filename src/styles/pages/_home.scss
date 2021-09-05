@@ -1,0 +1,267 @@
+.pdf2 {
+  display: none;
+}
+.home {
+  .homeContent {
+    background: linear-gradient(115deg, $color-1 25%, transparent 100%);
+    min-height: $minHeight;
+    width: 100%;
+    min-height: 500px;
+    border-radius: $borderRadius;
+    position: relative;
+    overflow: hidden;
+
+    &:after {
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: inherit;
+      background: url("https://media.giphy.com/media/xT9IgzoKnwFNmISR8I/giphy.gif")
+        no-repeat center/cover;
+      z-index: -1;
+      filter: brightness(30%);
+    }
+
+    .content {
+      position: absolute;
+      top: 20%;
+      left: 5%;
+      right: 5%;
+      font-family: $font-1;
+
+      h1 {
+        font-size: 4rem;
+        font-family: $font-4;
+        color: $color-5;
+        text-transform: uppercase;
+        text-shadow: 3px 6px 2px $black;
+        letter-spacing: 0.5rem;
+        text-transform: uppercase;
+      }
+      h2 {
+        font-size: 2.5rem;
+        padding: 5rem 0 5rem;
+        color: $color-3;
+        text-shadow: 1px 4px 1px $black;
+      }
+      p {
+        font-size: 1.2rem;
+        padding: 0.5rem 0 4rem;
+        color: $color-3;
+        text-shadow: 1px 2px 1px $black;
+      }
+
+      .pdf {
+        a {
+          font-size: 1.5rem;
+          background: $color-3;
+          padding: 1rem 2rem;
+          border-radius: $borderRadius;
+          box-shadow: 0 5px 1px rgb(15, 15, 15);
+          transition: 0.2s ease;
+          display: flex;
+          justify-content: center;
+
+          &:hover {
+            background: $color-4;
+          }
+        }
+      }
+    }
+  }
+}
+.mot {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+.mot-1 span {
+  position: absolute;
+  opacity: 0;
+  overflow: hidden;
+  color: $color-3;
+  -webkit-animation: rotateWord 18s linear infinite 0s;
+  -ms-animation: rotateWord 18s linear infinite 0s;
+  animation: rotateWord 18s linear infinite 0s;
+}
+.mot-1 span:nth-child(2) {
+  -webkit-animation-delay: 3s;
+  -ms-animation-delay: 3s;
+  animation-delay: 3s;
+  color: $color-3;
+}
+.mot-1 span:nth-child(3) {
+  -webkit-animation-delay: 6s;
+  -ms-animation-delay: 6s;
+  animation-delay: 6s;
+  color: $color-3;
+}
+.mot-1 span:nth-child(4) {
+  -webkit-animation-delay: 9s;
+  -ms-animation-delay: 9s;
+  animation-delay: 9s;
+  color: $color-3;
+}
+.mot-1 span:nth-child(5) {
+  -webkit-animation-delay: 12s;
+  -ms-animation-delay: 12s;
+  animation-delay: 12s;
+  color: $color-3;
+}
+.mot-1 span:nth-child(6) {
+  -webkit-animation-delay: 15s;
+  -ms-animation-delay: 15s;
+  animation-delay: 15s;
+  color: $color-3;
+}
+@-webkit-keyframes rotateWord {
+  0% {
+    opacity: 0;
+  }
+  2% {
+    opacity: 0;
+    -webkit-transform: translateY(-30px);
+  }
+  5% {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+  }
+  17% {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+  }
+  20% {
+    opacity: 0;
+    -webkit-transform: translateY(30px);
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-ms-keyframes rotateWord {
+  0% {
+    opacity: 0;
+  }
+  2% {
+    opacity: 0;
+    -ms-transform: translateY(-30px);
+  }
+  5% {
+    opacity: 1;
+    -ms-transform: translateY(0px);
+  }
+  17% {
+    opacity: 1;
+    -ms-transform: translateY(0px);
+  }
+  20% {
+    opacity: 0;
+    -ms-transform: translateY(30px);
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes rotateWord {
+  0% {
+    opacity: 0;
+  }
+  2% {
+    opacity: 0;
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  5% {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+  17% {
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+  20% {
+    opacity: 0;
+    -webkit-transform: translateY(30px);
+    transform: translateY(30px);
+  }
+  80% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@media screen and (max-width: 840px) {
+  .homeContent {
+    margin: 0 !important;
+  }
+  h1 {
+    font-size: 2rem !important;
+  }
+  h2 {
+    font-size: 2rem !important;
+    padding: 0 0 1rem !important;
+    text-align: inherit !important;
+  }
+  p {
+    font-size: 1rem !important;
+    padding: 0 0 2rem !important;
+  }
+  .pdf a {
+    justify-content: center !important;
+  }
+}
+@media screen and (max-width: 580px) {
+  .homeContent {
+    &:after {
+      background: url("https://media.giphy.com/media/xT9IgzoKnwFNmISR8I/giphy.gif")
+        no-repeat 60% 50% / cover !important;
+    }
+    h1 {
+      margin-bottom: 1rem;
+      font-size: 3rem !important;
+    }
+    h2 {
+      font-size: 1.8rem !important;
+    }
+  }
+}
+@media screen and (max-width: 430px) {
+  .content {
+    top: 10% !important;
+  }
+  .titre {
+    padding-top: 1rem;
+  }
+  .pdf {
+    display: none;
+  }
+  .pdf2 {
+    display: inherit !important;
+    a {
+      font-size: 1rem !important;
+      position: fixed;
+      width: 100%;
+      top: 100px;
+      left: 0;
+      background: $color-3 !important;
+      border-radius: $borderRadius !important;
+      box-shadow: 0 5px 1px rgb(15, 15, 15) !important;
+      transition: 0.2s ease !important;
+      display: flex !important;
+      justify-content: center !important;
+
+      &:hover {
+        background: $color-4 !important;
+      }
+    }
+  }
+}
